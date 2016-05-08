@@ -11,7 +11,7 @@ public class MainSort {
 
         Comparable[] data = RandomGenerated.Array1.clone();
 
-        Sorting sorter = new Merge();
+        Sorting sorter = new Quick();
 
         sorter.sort(data);
 
