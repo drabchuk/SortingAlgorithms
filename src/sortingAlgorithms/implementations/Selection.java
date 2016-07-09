@@ -8,7 +8,7 @@ import sortingAlgorithms.Sorting;
 public class Selection extends Sorting {
 
     @Override
-    public void sort(Comparable[] a) {
+    public Comparable[] sort(Comparable[] a) {
         int length = a.length;
         int minIndex;
 
@@ -23,6 +23,8 @@ public class Selection extends Sorting {
 
             exch(a, i, minIndex);
         }
+
+        return null;
     }
 
 }

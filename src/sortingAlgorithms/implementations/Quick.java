@@ -8,9 +8,11 @@ import sortingAlgorithms.Sorting;
 public class Quick extends Sorting {
 
     @Override
-    public void sort(Comparable[] a) {
+    public Comparable[] sort(Comparable[] a) {
 
         quickSort(a, 0, a.length - 1);
+
+        return null;
 
     }
 

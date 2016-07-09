@@ -9,15 +9,17 @@ public class MainSort {
 
     public static void main(String[] args) {
 
-        Comparable[] data = RandomGenerated.Array1.clone();
+        //Comparable[] data = RandomGenerated.Array1.clone();
+        Comparable[] data = new Comparable[RandomGenerated.Array1.length];
+        System.arraycopy(RandomGenerated.Array1, 0, data, 0, RandomGenerated.Array1.length);
 
-        Sorting sorter = new Quick();
+        Sorting sorter = new DenBubble();
 
-        sorter.sort(data);
+        Comparable[] sorted = sorter.sort(data);
 
         assert sorter.isSorted(data);
 
-        sorter.show(data);
+        sorter.show(sorted);
 
     }
 

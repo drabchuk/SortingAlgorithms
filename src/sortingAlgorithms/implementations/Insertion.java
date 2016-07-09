@@ -8,7 +8,7 @@ import sortingAlgorithms.Sorting;
 public class Insertion extends Sorting {
 
     @Override
-    public void sort(Comparable[] a) {
+    public Comparable[] sort(Comparable[] a) {
 
         int length = a.length;
 
@@ -17,6 +17,8 @@ public class Insertion extends Sorting {
                 exch(a, j, j - 1);
             }
         }
+
+        return null;
 
     }
 }

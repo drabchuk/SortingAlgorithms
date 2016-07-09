@@ -15,7 +15,9 @@ package sortingAlgorithms;
 public class Sorting implements Sortable{
 
     @Override
-    public void sort(Comparable[] a) {}
+    public Comparable[] sort(Comparable[] a) {
+        return null;
+    }
 
     protected static boolean less(Comparable v, Comparable w) {
         return (v.compareTo(w) < 0);

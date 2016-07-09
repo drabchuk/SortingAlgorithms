@@ -8,7 +8,7 @@ import sortingAlgorithms.Sorting;
 public class Shell extends Sorting{
 
     @Override
-    public void sort(Comparable[] a) {
+    public Comparable[] sort(Comparable[] a) {
         int length = a.length;
         int h = 1;
 
@@ -27,5 +27,7 @@ public class Shell extends Sorting{
             h /= 3;
 
         }
+
+        return null;
     }
 }

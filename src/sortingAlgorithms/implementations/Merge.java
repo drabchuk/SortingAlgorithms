@@ -8,12 +8,14 @@ import sortingAlgorithms.Sorting;
 public class Merge extends Sorting {
 
     @Override
-    public void sort(Comparable[] a) {
+    public Comparable[] sort(Comparable[] a) {
 
         Comparable[] aux = new Comparable[a.length];
         //System.arraycopy(a, 0, aux, 0, a.length);
 
         mergeSort(a, aux, 0, a.length);
+
+        return null;
 
     }
 
@@ -32,7 +34,7 @@ public class Merge extends Sorting {
 
     }
 
-    private void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
+    private Comparable[] merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
 
         System.arraycopy(a, lo, aux, lo, hi - lo);
 
@@ -54,6 +56,7 @@ public class Merge extends Sorting {
         while (j < hi) {
             a[counter++] = aux[j++];
         }
+        return null;
 
     }
 }

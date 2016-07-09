@@ -28,6 +28,7 @@ public class SortCompare {
 
         long time1 = time(sortAlg1, data);
         long time2 = time(sortAlg2, dataCopy);
+        long fasterTime, slowerTime;
 
         double index = (double) time1/time2;
 
@@ -37,17 +38,21 @@ public class SortCompare {
         if (index < 1) {
             fasterAlgName = sortAlg1.getClass().getSimpleName();
             slowerAlgName = sortAlg2.getClass().getSimpleName();
+            fasterTime = time1;
+            slowerTime = time2;
             reducedIndex = 1. / index;
         } else {
             fasterAlgName = sortAlg2.getClass().getSimpleName();
             slowerAlgName = sortAlg1.getClass().getSimpleName();
+            fasterTime = time2;
+            slowerTime = time1;
             reducedIndex = index;
         }
 
         System.out.println("Time performance test.");
         System.out.println("Array length: " + length);
-        System.out.println(fasterAlgName + " sort time = " + time1 + "ms");
-        System.out.println(slowerAlgName + " sort time = " + time2 + "ms");
+        System.out.println(fasterAlgName + " sort time = " + fasterTime + "ms");
+        System.out.println(slowerAlgName + " sort time = " + slowerTime + "ms");
         System.out.println(fasterAlgName +
                 " sort is " + reducedIndex + " times faster than " +
                 slowerAlgName + " sort.");
